@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4E7E7B09-3D74-48CA-9B6D-383D71105E4A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SFMLApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>837937af-0480-4eeb-b863-dea6bba5378f</key>
+		<string>http://svn.csse.rose-hulman.edu/repos/1516a-csse351-pastorsj</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Program2/SFMLApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>837937af-0480-4eeb-b863-dea6bba5378f</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>837937af-0480-4eeb-b863-dea6bba5378f</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>837937af-0480-4eeb-b863-dea6bba5378f</string>
+			<key>IDESourceControlWCCName</key>
+			<string>1516a-csse351-pastorsj</string>
+		</dict>
+	</array>
+</dict>
+</plist>
