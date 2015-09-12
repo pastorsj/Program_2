@@ -1,5 +1,5 @@
 #define USER1 "pastorsj"
-#define USER2 "put_username2_here"
+#define USER2 "persinme"
 
 //Add your program1.cpp code to this file
 
