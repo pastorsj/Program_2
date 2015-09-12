@@ -69,6 +69,12 @@ void display(WorldState & state)
 	
     GLuint timeSlot = glGetUniformLocation(shaderProg, "timeVal");
     glUniform1f(timeSlot, state.getCurrentTime());
+
+	GLuint xOffset = glGetUniformLocation(shaderProg, "xOffset");
+	glUniform1f(xOffset, state.getXOffset());
+
+	GLuint yOffset = glGetUniformLocation(shaderProg, "yOffset");
+	glUniform1f(yOffset, state.getYOffset());
     
 	//get uniform slot id
 	//TODO: send a uniform value to the shader
@@ -253,6 +259,23 @@ private:
 			// Escape key : exit
 			if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Escape))
 				state.setRunning(false);
+		}
+
+		if( sf::Keyboard::isKeyPressed( sf::Keyboard::Right ) )
+		{
+			state.moveRight();
+		}
+		if( sf::Keyboard::isKeyPressed( sf::Keyboard::Left ) )
+		{
+			state.moveLeft();
+		}
+		if( sf::Keyboard::isKeyPressed( sf::Keyboard::Up ) )
+		{
+			state.moveUp();
+		}
+		if( sf::Keyboard::isKeyPressed( sf::Keyboard::Down ) )
+		{
+			state.moveDown();
 		}
 	}
 

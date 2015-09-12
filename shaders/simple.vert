@@ -2,6 +2,8 @@
 
 //TODO: receive a uniform value
 uniform float timeVal;
+uniform float xOffset;
+uniform float yOffset;
 
 in vec2 pos;
 in vec3 color;
@@ -10,7 +12,7 @@ out vec4 smoothColor;
 
 void main()
 {
-	gl_Position = vec4(pos, 0, 1);
+	gl_Position = vec4(pos.x + xOffset, pos.y + yOffset, 0, 1);
 	smoothColor = vec4(color, 1);
 	
 	//TODO: make an animation!
