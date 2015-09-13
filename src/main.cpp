@@ -21,6 +21,7 @@
 #ifdef __APPLE__
 #include <fcntl.h>
 #include <unistd.h>
+#include <math.h>
 #endif
 
 #define GL3W
@@ -105,7 +106,6 @@ void display(WorldState & state)
 	
 	// Draw some primitives as: glDrawArrays(type, first, count)
 	//TODO: replace these with your draw calls
-	glDrawArrays(GL_LINES, 0, 2);
 	glDrawArrays(GL_TRIANGLES, 2, 3);
 	
 	
@@ -277,6 +277,12 @@ private:
 		{
 			state.moveDown();
 		}
+        if( sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
+            state.rotateClockWise();
+        }
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::C)) {
+            state.rotateCounterClockWise();
+        }
 	}
 
 	float getContextVersion()

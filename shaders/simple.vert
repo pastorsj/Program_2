@@ -4,6 +4,7 @@
 uniform float timeVal;
 uniform float xOffset;
 uniform float yOffset;
+uniform float theta;
 
 in vec2 pos;
 in vec3 color;

@@ -10,7 +10,7 @@ private:
 	float frameTimes[NUM_TRACKED_FRAMES];
 	float currentTime;
 	bool running;
-	float xOffset, yOffset;
+	float xOffset, yOffset, theta;
 
 public:
 	WorldState()
@@ -20,6 +20,7 @@ public:
 		running = true;
 		xOffset = 0.0f;
 		yOffset = 0.0f;
+        theta = 3.141592654 * 2 / 180;
 	}
 	
 	void updateFrameTime(float timeAsSeconds)
@@ -87,6 +88,18 @@ public:
 	{
 		this->yOffset = this->yOffset - this->frameTimes[0] * MOVEMENT_PER_SECOND;
 	}
+    
+    void rotateCounterClockWise()
+    {
+        this->xOffset = this->xOffset * cos(theta) - this->yOffset * sin(theta);
+        this->yOffset = this->xOffset * sin(theta) + this->yOffset * cos(theta);
+    }
+    
+    void rotateClockWise()
+    {
+        this->xOffset = this->xOffset * cos(theta) + this->yOffset * sin(theta);
+        this->yOffset = -1 * this->xOffset * sin(theta) + this->yOffset * cos(theta);
+    }
 
 
 };

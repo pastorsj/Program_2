@@ -10,29 +10,31 @@
 	<string>SFMLApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>837937af-0480-4eeb-b863-dea6bba5378f</key>
-		<string>http://svn.csse.rose-hulman.edu/repos/1516a-csse351-pastorsj</string>
+		<key>6A37204F4BE46A3D0C488E38566CD0D75C7500BE</key>
+		<string>https://github.com/pastorsj/Program_2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Program2/SFMLApp.xcodeproj</string>
+	<string>SFMLApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>837937af-0480-4eeb-b863-dea6bba5378f</key>
-		<string>../../..</string>
+		<key>6A37204F4BE46A3D0C488E38566CD0D75C7500BE</key>
+		<string>../..</string>
 	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pastorsj/Program_2.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>837937af-0480-4eeb-b863-dea6bba5378f</string>
+	<string>6A37204F4BE46A3D0C488E38566CD0D75C7500BE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>837937af-0480-4eeb-b863-dea6bba5378f</string>
+			<string>6A37204F4BE46A3D0C488E38566CD0D75C7500BE</string>
 			<key>IDESourceControlWCCName</key>
-			<string>1516a-csse351-pastorsj</string>
+			<string>Program_2</string>
 		</dict>
 	</array>
 </dict>
