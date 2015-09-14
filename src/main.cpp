@@ -361,6 +361,8 @@ public:
 int main()
 {
 	printf("Program by %s+%s\n", USER1, USER2);
+	printf("Press arrow keys to move triangle\n");
+	printf("Press 'c' and 'r' to rotate graphic\n");
 	GLBox prog;
 	
     return EXIT_SUCCESS;
