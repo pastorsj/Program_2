@@ -45,13 +45,16 @@ GLuint shaderProg;
 
 GLuint positionBuffer;
 GLuint colorBuffer;
+GLuint speedBuffer;
 GLuint vertexArray;
 GLint positionSlot;
 GLint colorSlot;
+GLint speedSlot;
 
 //TODO: replace these with your scene data
 GLfloat positions[10] = {-1,-1, 1,1, -0.5,-0.366, 0,0.5, 0.5,-0.366};
 GLfloat colors[15] = {1,1,1, 0.5,0.5,0.5, 1,0,0, 0,1,0, 0,0,1};
+GLfloat speedMult[5] = { 1, 1, 0.5, 2, 1 };
 
 /*
  Draw a single frame
@@ -101,6 +104,11 @@ void display(WorldState & state)
 	glEnableVertexAttribArray(colorSlot);
 	glVertexAttribPointer(colorSlot, 3, GL_FLOAT, GL_FALSE, 0, 0);
 	checkGLError("color array setup");
+
+	glBindBuffer(GL_ARRAY_BUFFER, speedBuffer);
+	glEnableVertexAttribArray(speedSlot);
+	glVertexAttribPointer(speedSlot, 1, GL_FLOAT, GL_FALSE, 0, 0);
+	checkGLError("speed array setup");
 	
 	
 	
@@ -141,14 +149,17 @@ void graphicsInit()
 	// Find out where the shader expects the data
 	positionSlot = glGetAttribLocation(shaderProg, "pos");
 	colorSlot = glGetAttribLocation(shaderProg, "color");
+	speedSlot = glGetAttribLocation(shaderProg, "speed");
 	if(positionSlot < 0 || colorSlot < 0) {
 		fprintf(stderr, "Could not get input location\n");
 	}
 
 	glGenBuffers(1, &positionBuffer); //make the position buffer
 	glGenBuffers(1, &colorBuffer);
+	glGenBuffers(1, &speedBuffer);
 	if(positionBuffer == 0) fprintf(stderr, "GenBuffer failed\n");
 	if(colorBuffer == 0) fprintf(stderr, "GenBuffer failed\n");
+	if(speedBuffer == 0) fprintf(stderr, "GenBuffer failed\n");
 	
 	glGenVertexArrays(1, &vertexArray);
 	glBindBuffer(GL_ARRAY_BUFFER, positionBuffer); //activate the position buffer
@@ -161,6 +172,12 @@ void graphicsInit()
 	glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	checkGLError("color buffer");
+
+	// Do the same for speed data
+	glBindBuffer(GL_ARRAY_BUFFER, speedBuffer);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(speedMult), speedMult, GL_STATIC_DRAW);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	checkGLError("speed buffer");
 }
 
 void saveBuffer(sf::Window const & window)

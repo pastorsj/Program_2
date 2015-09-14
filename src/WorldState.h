@@ -20,7 +20,7 @@ public:
 		running = true;
 		xOffset = 0.0f;
 		yOffset = 0.0f;
-        theta = 3.141592654 * 2 / 180;
+        theta = 3.141592654 * 240 / 180;
 	}
 	
 	void updateFrameTime(float timeAsSeconds)
@@ -91,14 +91,14 @@ public:
     
     void rotateCounterClockWise()
     {
-        this->xOffset = this->xOffset * cos(theta) - this->yOffset * sin(theta);
-        this->yOffset = this->xOffset * sin(theta) + this->yOffset * cos(theta);
+        this->xOffset = this->xOffset * cos(theta * this->frameTimes[0]) - this->yOffset * sin(theta * this->frameTimes[0]);
+        this->yOffset = this->xOffset * sin(theta * this->frameTimes[0]) + this->yOffset * cos(theta * this->frameTimes[0]);
     }
     
     void rotateClockWise()
     {
-        this->xOffset = this->xOffset * cos(theta) + this->yOffset * sin(theta);
-        this->yOffset = -1 * this->xOffset * sin(theta) + this->yOffset * cos(theta);
+        this->xOffset = this->xOffset * cos(theta * this->frameTimes[0]) + this->yOffset * sin(theta * this->frameTimes[0]);
+        this->yOffset = -1 * this->xOffset * sin(theta * this->frameTimes[0]) + this->yOffset * cos(theta * this->frameTimes[0]);
     }
 
 
